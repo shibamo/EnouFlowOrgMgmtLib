@@ -99,8 +99,44 @@ namespace EnouFlowOrgMgmtLib
     public bool isVisible { get; set; } = true;
     //其他组织与本系统所服务的组织的亲缘性级别, 越小则越亲近
     public int affintyLevel { get; set; } = 0;
-
     public virtual List<OrgSchema> orgSchemas { get; set; }
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
 
     [NotMapped]
     public OrgSchema orgSchema
@@ -136,9 +172,45 @@ namespace EnouFlowOrgMgmtLib
     public bool isDefault { get; set; } = true;
     public bool isVisible { get; set; } = true;
     public DateTime createTime { get; set; } = DateTime.Now;
-
     public virtual List<BizEntityRelationOnOrgSchema> 
       bizEntityRelationOnOrgSchemas { get; set; }
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
 
     [NotMapped]
     public List<BizEntity> rootBizEntities //该组织结构方案下的顶级业务实体集
@@ -175,6 +247,44 @@ namespace EnouFlowOrgMgmtLib
     public string DunsNumber { get; set; } //邓白氏
     public bool isVisible { get; set; } = true;
     public DateTime createTime { get; set; } = DateTime.Now;
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
+    public virtual List<BizEntitySchema> bizEntitySchemas { get; set; }
 
     public List<BizEntity> getBizEntitiesChildren(EnouFlowOrgMgmtContext db, OrgSchema orgSchema)
     {
@@ -195,7 +305,6 @@ namespace EnouFlowOrgMgmtLib
     [NotMapped]
     public List<BizEntity> bizEntitiesParentAll { get; }
 
-    public virtual List<BizEntitySchema> bizEntitySchemas { get; set; }
   }
 
   [Table("Enou_BizEntitiesRelationOnOrgSchema")]
@@ -217,8 +326,44 @@ namespace EnouFlowOrgMgmtLib
 
     public DateTime createTime { get; set; } = DateTime.Now;
     public bool isValid { get; set; } = true;
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
   }
-
 
   [Table("Enou_BizEntitySchema")]
   public class BizEntitySchema // 
@@ -239,7 +384,45 @@ namespace EnouFlowOrgMgmtLib
 
     public virtual List<Department> departments { get; set; } //该实体结构方案下的所有部门(项目组)集
 
-    public virtual List<DepartmentParentChildRelation> departmentParentChildRelations { get; set; } //该实体结构方案下的部门父子关系集
+    public virtual List<DepartmentParentChildRelation> 
+      departmentParentChildRelations { get; set; } //该实体结构方案下的部门父子关系集
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
 
     //该实体结构方案下的顶级部门(项目组)集
     public List<Department> getRootDepartments(EnouFlowOrgMgmtContext db)
@@ -268,6 +451,44 @@ namespace EnouFlowOrgMgmtLib
     public string indexNumber { get; set; }
     public bool isVisible { get; set; } = true;
     public DateTime createTime { get; set; } = DateTime.Now;
+    public virtual List<DepartmentUserRelation> departmentUserRelations { get; set; }
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
 
     //该部门包含的所有用户列表
     public List<User> getUserChildren(EnouFlowOrgMgmtContext db)
@@ -295,9 +516,6 @@ namespace EnouFlowOrgMgmtLib
         r => r.departmentIdChild == this.departmentId).
         ToList().FirstOrDefault().departmentParent;
     }
-
-    public virtual List<DepartmentUserRelation> departmentUserRelations { get; set; }
-
   }
 
   [Table("Enou_DepartmentParentChildRelation")]
@@ -320,6 +538,43 @@ namespace EnouFlowOrgMgmtLib
     public DateTime createTime { get; set; } = DateTime.Now;
 
     public bool isValid { get; set; } = true;
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
   }
 
   [Table("Enou_User")]
@@ -347,9 +602,45 @@ namespace EnouFlowOrgMgmtLib
     public DateTime createTime { get; set; } = DateTime.Now;
     public DateTime? validTimeFrom { get; set; }
     public DateTime? validTimeTo { get; set; }
-
     public virtual List<DepartmentUserRelation> departmentUserRelations { get; set; }
     public virtual List<RoleUserRelation> roleUserRelations { get; set; }
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
 
     //该用户所属的所有(根据输入参数筛选有效性)部门列表
     public List<Department> getDepartmentsBelongTo(
@@ -395,6 +686,43 @@ namespace EnouFlowOrgMgmtLib
 
     public DateTime createTime { get; set; } = DateTime.Now;
     public bool isValid { get; set; } = true;
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
   }
 
   [Table("Enou_Role")]
@@ -411,10 +739,45 @@ namespace EnouFlowOrgMgmtLib
     public string indexNumber { get; set; }
     public bool isVisible { get; set; } = true;
     public DateTime createTime { get; set; } = DateTime.Now;
-
     public virtual List<RoleUserRelation> roleUserRelations { get; set; }
-
     public virtual List<Role_RoleTypeRelation> role_RoleTypeRelations { get; set; }
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
 
     //该角色所拥有的所有用户列表
     public List<User> getUsersBelongTo(
@@ -452,6 +815,43 @@ namespace EnouFlowOrgMgmtLib
 
     public DateTime createTime { get; set; } = DateTime.Now;
     public bool isValid { get; set; } = true;
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
   }
 
   [Table("Enou_RoleType")]
@@ -513,5 +913,42 @@ namespace EnouFlowOrgMgmtLib
     public string logonPasswordHash { get; set; }
     public DateTime createTime { get; set; } = DateTime.Now;
     public DateTime? lastLogonTime { get; set; }
+    #region 自定义字段列表
+    public int? intField_1 { get; set; }
+    public int? intField_2 { get; set; }
+    public int? intField_3 { get; set; }
+    public int? intField_4 { get; set; }
+    public int? intField_5 { get; set; }
+    public int? intField_6 { get; set; }
+    public int? intField_7 { get; set; }
+    public int? intField_8 { get; set; }
+    public int? intField_9 { get; set; }
+    public int? intField_10 { get; set; }
+    public string stringField_1 { get; set; }
+    public string stringField_2 { get; set; }
+    public string stringField_3 { get; set; }
+    public string stringField_4 { get; set; }
+    public string stringField_5 { get; set; }
+    public string stringField_6 { get; set; }
+    public string stringField_7 { get; set; }
+    public string stringField_8 { get; set; }
+    public string stringField_9 { get; set; }
+    public string stringField_10 { get; set; }
+    public decimal? decimalField_1 { get; set; }
+    public decimal? decimalField_2 { get; set; }
+    public decimal? decimalField_3 { get; set; }
+    public decimal? decimalField_4 { get; set; }
+    public decimal? decimalField_5 { get; set; }
+    public decimal? decimalField_6 { get; set; }
+    public decimal? decimalField_7 { get; set; }
+    public decimal? decimalField_8 { get; set; }
+    public decimal? decimalField_9 { get; set; }
+    public decimal? decimalField_10 { get; set; }
+    public DateTime? dateTimeField_1 { get; set; }
+    public DateTime? dateTimeField_2 { get; set; }
+    public DateTime? dateTimeField_3 { get; set; }
+    public DateTime? dateTimeField_4 { get; set; }
+    public DateTime? dateTimeField_5 { get; set; }
+    #endregion
   }
 }
