@@ -76,7 +76,7 @@ namespace EnouFlowOrgMgmtLib
     public DbSet<RoleType> roleTypes { get; set; }
     public DbSet<Role_RoleTypeRelation> role_RoleTypeRelations { get; set; }
 
-    public DbSet<SystemManager> systemManagers { get; set; }
+    //public DbSet<SystemManager> systemManagers { get; set; }
   }
 
   [Table("Enou_Org")]
