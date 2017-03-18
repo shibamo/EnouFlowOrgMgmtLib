@@ -105,6 +105,21 @@ namespace EnouFlowOrgMgmtLib
       return convertUser2DTO(getUser(guid, db), db);
     }
 
+    public static UserDTO getUserDTO(int id)
+    {
+      using (EnouFlowOrgMgmtContext db = new EnouFlowOrgMgmtContext()) { 
+        return getUserDTO(id,db);
+      }
+    }
+
+    public static UserDTO getUserDTO(string guid)
+    {
+      using (EnouFlowOrgMgmtContext db = new EnouFlowOrgMgmtContext())
+      {
+        return getUserDTO(guid, db);
+      }
+    }
+
     public static User getUser(string guid, EnouFlowOrgMgmtContext db)
     {
       return db.users.Where(user => user.guid == guid).
