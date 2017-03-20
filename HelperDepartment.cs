@@ -14,7 +14,8 @@ namespace EnouFlowOrgMgmtLib
       return db.departments.Create();
     }
 
-    public static void saveCreatedDepartment(BizEntitySchema bizEntitySchema, Department department,
+    public static void saveCreatedDepartment(
+      BizEntitySchema bizEntitySchema, Department department,
       Department departmentParent, EnouFlowOrgMgmtContext db)
     {
       if (!db.departments.ToList().Contains(department)) //新创建尚未存入DB的Department
@@ -47,7 +48,8 @@ namespace EnouFlowOrgMgmtLib
       db.SaveChanges();
     }
 
-    public static void setParentDepartment(int id, Department bizDepartmentParent, int bizEntitySchemaId, EnouFlowOrgMgmtContext db)
+    public static void setParentDepartment(int id, Department bizDepartmentParent, 
+      int bizEntitySchemaId, EnouFlowOrgMgmtContext db)
     {
       var bizEntitySchema = db.bizEntitySchemas.Find(bizEntitySchemaId);
       var department = db.departments.Find(id);
@@ -124,6 +126,24 @@ namespace EnouFlowOrgMgmtLib
       EnouFlowOrgMgmtContext db) {
       return db.departments.ToList().Select(department =>
         convertDepartment2DTO(department, db)).ToList();
+    }
+
+    public static List<UserDTO> getUserDTOsOfPositionInDepartment(
+      int id, EnouFlowOrgMgmtContext db, UserPositionToDepartment position)
+    {
+      var relations = db.departmentUserRelations.Where(
+        obj => obj.assistDepartmentId == id && obj.isValid &&
+        obj.userPosition == position).ToList();
+
+      if(relations == null || relations.Count() == 0)
+      {
+        return null;
+      }
+      else
+      {
+        return relations.Select(obj => 
+          getUserDTO(obj.assistUserId)).ToList();
+      }
     }
 
     private static bool isDepartmentRemovable(int id, EnouFlowOrgMgmtContext db)
@@ -233,6 +253,21 @@ namespace EnouFlowOrgMgmtLib
       departmentUserRelation.assistUserId = user.userId;
       departmentUserRelation.userPosition = userPositionToDepartment;
 
+      db.SaveChanges();
+    }
+
+    public static void updateUserPositionToDepartment(
+      Department department, User user, EnouFlowOrgMgmtContext db, 
+      UserPositionToDepartment userPositionToDepartment)
+    {
+      var relation = db.departmentUserRelations.Where(obj=>
+        obj.assistUserId==user.userId && 
+        obj.assistDepartmentId == department.departmentId).
+        FirstOrDefault();
+      if (relation != null)
+      {
+        relation.userPosition = userPositionToDepartment;
+      }
       db.SaveChanges();
     }
     #endregion
