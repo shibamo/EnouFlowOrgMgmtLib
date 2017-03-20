@@ -129,7 +129,7 @@ namespace EnouFlowOrgMgmtLib
     }
 
     public static List<UserDTO> getUserDTOsOfPositionInDepartment(
-      int id, EnouFlowOrgMgmtContext db, UserPositionToDepartment position)
+      int id, UserPositionToDepartment position, EnouFlowOrgMgmtContext db)
     {
       var relations = db.departmentUserRelations.Where(
         obj => obj.assistDepartmentId == id && obj.isValid &&
@@ -143,6 +143,15 @@ namespace EnouFlowOrgMgmtLib
       {
         return relations.Select(obj => 
           getUserDTO(obj.assistUserId)).ToList();
+      }
+    }
+
+    public static List<UserDTO> getUserDTOsOfPositionInDepartment(
+      int id, UserPositionToDepartment position)
+    {
+      using(var db = new EnouFlowOrgMgmtContext())
+      {
+        return getUserDTOsOfPositionInDepartment(id, position, db);
       }
     }
 
@@ -269,6 +278,30 @@ namespace EnouFlowOrgMgmtLib
         relation.userPosition = userPositionToDepartment;
       }
       db.SaveChanges();
+    }
+
+    public static Department getUserDefaultDepartment(
+      int userId, EnouFlowOrgMgmtContext db)
+    {
+      var departmentUserRelation = db.departmentUserRelations.Where(
+        obj => obj.assistUserId == userId && obj.isValid).FirstOrDefault();
+      if (departmentUserRelation != null)
+      {
+        return db.departments.Find(
+          departmentUserRelation.assistDepartmentId);
+      }
+      else
+      {
+        return null;
+      }
+    }
+
+    public static Department getUserDefaultDepartment(int userId)
+    {
+      using (var db = new EnouFlowOrgMgmtContext())
+      {
+        return getUserDefaultDepartment(userId, db);
+      }
     }
     #endregion
   }
