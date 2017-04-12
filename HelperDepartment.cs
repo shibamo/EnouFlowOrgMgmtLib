@@ -99,6 +99,19 @@ namespace EnouFlowOrgMgmtLib
       return true;
     }
 
+    public static Department getDepartment(int id, EnouFlowOrgMgmtContext db)
+    {
+      return db.departments.Find(id);
+    }
+
+    public static Department getDepartment(int id)
+    {
+      using(EnouFlowOrgMgmtContext db = new EnouFlowOrgMgmtContext())
+      {
+        return getDepartment(id, db);
+      }
+    }
+
     public static DepartmentDTO convertDepartment2DTO(Department obj,
       EnouFlowOrgMgmtContext db)
     {
