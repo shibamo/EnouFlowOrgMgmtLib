@@ -58,6 +58,9 @@
     <Compile Include="DTOs\RoleDTO.cs" />
     <Compile Include="DTOs\RoleTypeDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
+    <Compile Include="Exceptions\DataLogicException.cs" />
+    <Compile Include="Exceptions\GuidNotAllowedToChangeException.cs" />
+    <Compile Include="Exceptions\NameDuplicationException.cs" />
     <Compile Include="HelperRole.cs" />
     <Compile Include="HelperRoleType.cs" />
     <Compile Include="HelperUser.cs" />
@@ -67,7 +70,6 @@
     <Compile Include="DTOs\DTOs.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="EnouFlowOrgDB.cs" />
-    <Compile Include="Exceptions.cs" />
     <Compile Include="OrgMgmtDBHelper.cs" />
     <Compile Include="Migrations\201701040709035_add-BizEntityRelationOnOrgSchema.cs" />
     <Compile Include="Migrations\201701040709035_add-BizEntityRelationOnOrgSchema.Designer.cs">
