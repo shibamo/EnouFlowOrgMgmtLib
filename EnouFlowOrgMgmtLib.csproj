@@ -50,13 +50,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\BizEntityDTO.cs" />
+    <Compile Include="DTOs\BizEntitySchemaDTO.cs" />
+    <Compile Include="DTOs\DepartmentDTO.cs" />
+    <Compile Include="DTOs\OrgDTO.cs" />
+    <Compile Include="DTOs\OrgSchemaDTO.cs" />
+    <Compile Include="DTOs\RoleDTO.cs" />
+    <Compile Include="DTOs\RoleTypeDTO.cs" />
+    <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="HelperRole.cs" />
     <Compile Include="HelperRoleType.cs" />
     <Compile Include="HelperUser.cs" />
     <Compile Include="HelperBizEntity.cs" />
     <Compile Include="HelperDepartment.cs" />
     <Compile Include="HelperOrg.cs" />
-    <Compile Include="DTOs.cs" />
+    <Compile Include="DTOs\DTOs.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="EnouFlowOrgDB.cs" />
     <Compile Include="Exceptions.cs" />
@@ -97,6 +105,9 @@
     <EmbeddedResource Include="Migrations\201701042315275_add-restructure2.resx">
       <DependentUpon>201701042315275_add-restructure2.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DBHelpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
