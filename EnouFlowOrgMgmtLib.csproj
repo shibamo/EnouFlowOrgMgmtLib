@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,6 +22,49 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>True</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsAssertsToContractsCheckBox>True</CodeContractsAssertsToContractsCheckBox>
+    <CodeContractsRedundantTests>True</CodeContractsRedundantTests>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsMissingPublicEnsuresAsWarnings>False</CodeContractsMissingPublicEnsuresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferEnsuresAutoProperties>True</CodeContractsInferEnsuresAutoProperties>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestAssumptionsForCallees>False</CodeContractsSuggestAssumptionsForCallees>
+    <CodeContractsSuggestRequires>False</CodeContractsSuggestRequires>
+    <CodeContractsNecessaryEnsures>True</CodeContractsNecessaryEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsSuggestReadonly>True</CodeContractsSuggestReadonly>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsSQLServerOption />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsSkipAnalysisIfCannotConnectToCache>False</CodeContractsSkipAnalysisIfCannotConnectToCache>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsBeingOptimisticOnExternal>True</CodeContractsBeingOptimisticOnExternal>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,9 +83,18 @@
       <HintPath>..\..\EnouFlowEngine\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NSubstitute, Version=2.0.3.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
+      <HintPath>..\..\EnouFlowEngine\packages\NSubstitute.2.0.3\lib\net45\NSubstitute.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.7.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\EnouFlowEngine\packages\NUnit.3.7.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +103,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBHelpers\BizEntityHelper.cs" />
+    <Compile Include="DBHelpers\BizEntitySchemaHelper.cs" />
+    <Compile Include="DBHelpers\DepartmentHelper.cs" />
+    <Compile Include="DBHelpers\Interfaces\IDBObjectHelperBase.cs" />
+    <Compile Include="DBHelpers\BaseHelper.cs" />
+    <Compile Include="DBHelpers\Interfaces\IDBObjectSimpleSaveObject.cs" />
+    <Compile Include="DBHelpers\OrgHelper.cs" />
+    <Compile Include="DBHelpers\OrgSchemaHelper.cs" />
+    <Compile Include="DBHelpers\RoleHelper.cs" />
+    <Compile Include="DBHelpers\RoleTypeHelper.cs" />
+    <Compile Include="DBHelpers\UserHelper.cs" />
     <Compile Include="DTOs\BizEntityDTO.cs" />
     <Compile Include="DTOs\BizEntitySchemaDTO.cs" />
     <Compile Include="DTOs\DepartmentDTO.cs" />
@@ -61,15 +125,16 @@
     <Compile Include="Exceptions\DataLogicException.cs" />
     <Compile Include="Exceptions\GuidNotAllowedToChangeException.cs" />
     <Compile Include="Exceptions\NameDuplicationException.cs" />
-    <Compile Include="HelperRole.cs" />
-    <Compile Include="HelperRoleType.cs" />
-    <Compile Include="HelperUser.cs" />
-    <Compile Include="HelperBizEntity.cs" />
-    <Compile Include="HelperDepartment.cs" />
-    <Compile Include="HelperOrg.cs" />
+    <Compile Include="DBHelpers\Retired!\HelperRole.cs" />
+    <Compile Include="DBHelpers\Retired!\HelperRoleType.cs" />
+    <Compile Include="DBHelpers\Retired!\HelperUser.cs" />
+    <Compile Include="DBHelpers\Retired!\HelperBizEntity.cs" />
+    <Compile Include="DBHelpers\Retired!\HelperDepartment.cs" />
+    <Compile Include="DBHelpers\Retired!\HelperOrg.cs" />
     <Compile Include="DTOs\DTOs.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="EnouFlowOrgDB.cs" />
+    <Compile Include="Exceptions\NotSupportedMethodSignatureException.cs" />
     <Compile Include="OrgMgmtDBHelper.cs" />
     <Compile Include="Migrations\201701040709035_add-BizEntityRelationOnOrgSchema.cs" />
     <Compile Include="Migrations\201701040709035_add-BizEntityRelationOnOrgSchema.Designer.cs">
@@ -89,6 +154,16 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Attributes\RollbackAttribute.cs" />
+    <Compile Include="Tests\Integration\BizEntityHelperTestsI.cs" />
+    <Compile Include="Tests\Integration\BizEntitySchemaHelperTestsI.cs" />
+    <Compile Include="Tests\Integration\DepartmentHelperTestsI.cs" />
+    <Compile Include="Tests\Integration\OrgHelperTestsI.cs" />
+    <Compile Include="Tests\Integration\OrgSchemaHelperTestsI.cs" />
+    <Compile Include="Tests\Integration\RoleTypeHelperTestsI.cs" />
+    <Compile Include="Tests\Integration\RoleHelperTestsI.cs" />
+    <Compile Include="Tests\Integration\UserHelperTestsI.cs" />
+    <Compile Include="Tests\Unit\OrgHelperTestsU.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -108,8 +183,9 @@
       <DependentUpon>201701042315275_add-restructure2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DBHelpers\" />
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

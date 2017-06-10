@@ -225,8 +225,6 @@ namespace EnouFlowOrgMgmtLib
       return new Tuple<string, string>(hashString, salt);
     }
 
-
-
     #endregion
   }
 }

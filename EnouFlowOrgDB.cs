@@ -163,6 +163,10 @@ namespace EnouFlowOrgMgmtLib
     public int orgSchemaId { get; set; }
     [Required]
     public string guid { get; set; } = Guid.NewGuid().ToString();
+    [ForeignKey("Org")]
+    public int orgId { get; set; }
+    [Required]
+    public virtual Org Org { get; set; }
     [Required]
     public string name { get; set; } = "Default OrgSchema";
     public string shortName { get; set; }
@@ -371,6 +375,11 @@ namespace EnouFlowOrgMgmtLib
     [Key]
     public int bizEntitySchemaId { get; set; }
     public string guid { get; set; } = Guid.NewGuid().ToString();
+
+    [ForeignKey("BizEntity")]
+    public int bizEntityId { get; set; }
+    [Required]
+    public virtual BizEntity BizEntity { get; set; }
     [Required]
     public string name { get; set; } = "Default BizEntitySchema";
     public string shortName { get; set; }

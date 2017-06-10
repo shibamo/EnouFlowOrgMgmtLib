@@ -85,8 +85,6 @@ namespace EnouFlowOrgMgmtLib
       return db.orgSchemas.Create();
     }
 
-
-
     public static void saveCreatedOrgSchema(Org org, OrgSchema orgSchema, EnouFlowOrgMgmtContext db)
     {
       //简单模式下一个Org下只有一个OrgSchema
@@ -110,8 +108,6 @@ namespace EnouFlowOrgMgmtLib
       db.SaveChanges();
     }
 
-
-
     public static OrgSchemaDTO convertOrgSchema2DTO(OrgSchema obj)
     {
       return new OrgSchemaDTO()
@@ -130,8 +126,6 @@ namespace EnouFlowOrgMgmtLib
           bizEntity => convertBizEntity2DTO(bizEntity)).ToList()
       };
     }
-
-
 
     public static bool isOrgSchemaExists(int id, EnouFlowOrgMgmtContext db)
     {

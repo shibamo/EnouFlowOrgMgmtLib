@@ -127,7 +127,7 @@ namespace EnouFlowOrgMgmtLib
       return true;
     }
 
-    public static bool isBizEntitySetParentAllowed(int id, BizEntity parent,
+    private static bool isBizEntitySetParentAllowed(int id, BizEntity parent,
       int orgSchemaId, EnouFlowOrgMgmtContext db)
     {
       #region Cannot be the parent of self
@@ -256,7 +256,8 @@ namespace EnouFlowOrgMgmtLib
       return true;
     }
 
-    public static BizEntitySchemaDTO convertBizEntitySchema2DTO(BizEntitySchema obj, EnouFlowOrgMgmtContext db)
+    public static BizEntitySchemaDTO convertBizEntitySchema2DTO(BizEntitySchema obj,
+      EnouFlowOrgMgmtContext db)
     {
       return new BizEntitySchemaDTO()
       {
